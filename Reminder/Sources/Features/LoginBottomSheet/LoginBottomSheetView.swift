@@ -25,12 +25,26 @@ class LoginBottomSheetView: UIView {
         return view
     }()
     
+    private let emailLabel: UILabel = {
+        let label = UILabel()
+        label.text = "E-mail"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let emailTextField: UITextField = {
         let text = UITextField()
         text.placeholder = "email@exemplo.com"
         text.borderStyle = .roundedRect
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
+    }()
+    
+    private let passLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Senha"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     private let passwordTextField: UITextField = {
@@ -67,6 +81,8 @@ class LoginBottomSheetView: UIView {
         
         addSubview(handleArea)
         addSubview(titleLabel)
+        addSubview(emailLabel)
+        addSubview(passLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
@@ -84,10 +100,16 @@ class LoginBottomSheetView: UIView {
             titleLabel.topAnchor.constraint(equalTo: handleArea.bottomAnchor, constant: Metrics.medium),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
             
-            emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
+            emailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
+            emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            
+            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: Metrics.medium),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Metrics.medium),
+            passLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Metrics.medium),
+            passLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            
+            passwordTextField.topAnchor.constraint(equalTo: passLabel.bottomAnchor, constant: Metrics.medium),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
             
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: Metrics.medium),
