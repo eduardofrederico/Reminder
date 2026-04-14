@@ -2,7 +2,7 @@
 //  Colors-Constants.swift
 //  Reminder
 //
-//  Created by Maria Eliza on 09/03/26.
+//  Created by Eduardo Frederico on 09/03/26.
 //
 
 import Foundation

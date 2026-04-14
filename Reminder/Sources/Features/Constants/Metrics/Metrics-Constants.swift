@@ -2,7 +2,7 @@
 //  Metrics-Constants.swift
 //  Reminder
 //
-//  Created by Maria Eliza on 30/03/26.
+//  Created by Eduardo Frederico on 30/03/26.
 //
 
 import Foundation
@@ -10,8 +10,11 @@ import UIKit
 
 public struct Metrics {
     public static var huge: CGFloat = 48
+    public static var big: CGFloat = 40
     public static var medium: CGFloat = 24
     public static var small: CGFloat = 12
     public static var tiny: CGFloat = 8
     public static var little: CGFloat = 4
+    public static var buttonSize: CGFloat = 56
+    public static var inputSize: CGFloat = 56
 }

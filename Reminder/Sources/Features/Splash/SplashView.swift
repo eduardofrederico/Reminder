@@ -2,7 +2,7 @@
 //  SplashView.swift
 //  Reminder
 //
-//  Created by Maria Eliza on 02/03/26.
+//  Created by Eduardo Frederico on 02/03/26.
 //
 
 import Foundation

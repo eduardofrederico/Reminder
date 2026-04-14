@@ -2,6 +2,21 @@
   Localizable.strings
   Reminder
 
-  Created by Maria Eliza on 13/04/26.
+  Created by Eduardo Frederico on 13/04/26.
   
 */
+
+/* MARK - LOGIN Screen */
+
+"login.label.title" = "Entre para acessar suas receitas";
+"login.loginText.label.title" = "E-mail";
+"login.email.placeholder" = "email@exemplo.com";
+"login.passwordText.label.title" = "Senha";
+"login.password.placeholder" = "senha";
+"login.button.title" = "Entrar";
+
+/* MARK - HOME Screen */
+
+/* MARK - RECEIPTS Screen */
+
+/* MARK - NEW RECEIPT Screen */
