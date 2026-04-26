@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class LoginBottomSheetViewController: UIViewController {
+    var mainNavigation: UINavigationController?
     let loginView = LoginBottomSheetView()
     let viewModel = LoginBottomSheetViewModel()
     var handleAreaHeight: CGFloat = 50.0
@@ -41,8 +42,10 @@ class LoginBottomSheetViewController: UIViewController {
     }
     private func bindViewModel() {
         viewModel.successResult = {[weak self] in
-            //mostrar próxima tela ou erro de login
-            print("Ok")
+            let viewController = UIViewController()
+            viewController.view.backgroundColor = .red
+            self?.dismiss(animated: false)
+            self?.mainNavigation?.pushViewController(viewController, animated: true)
         }
     }
     
