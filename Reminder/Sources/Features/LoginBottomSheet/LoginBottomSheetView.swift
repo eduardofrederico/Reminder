@@ -141,7 +141,7 @@ class LoginBottomSheetView: UIView {
     @objc
     func loginButtonDidTapeed() {
         let password = passwordTextField.text ?? ""
-        let user = emailTextField.text ?? "
+        let user = emailTextField.text ?? ""
         delegate?.sendLoginData(user: user, password: password)
     }
 
