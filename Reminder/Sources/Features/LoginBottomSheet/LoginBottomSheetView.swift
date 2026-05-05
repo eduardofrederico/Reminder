@@ -69,7 +69,7 @@ class LoginBottomSheetView: UIView {
         button.setTitle("login.button.title".localized, for: .normal)
         button.backgroundColor = Colors.primaryRedBase
         button.layer.cornerRadius = Metrics.medium
-        button.addTarget(self, action: #selector(loginButtonDidTapeed()), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonDidTapeed), for: .touchUpInside)
         button.titleLabel?.font = Typography.subHeading
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
