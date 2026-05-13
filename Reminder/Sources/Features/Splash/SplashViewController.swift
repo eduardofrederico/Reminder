@@ -25,7 +25,8 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGesture()
-        decideNavigationFlow()
+        startBreathingAnimation()
+        //decideNavigationFlow()
         setup()
         
     }
@@ -64,8 +65,25 @@ class SplashViewController: UIViewController {
     
     @objc
     private func showLoginBottomSheet() {
-        func openLoginBottomSheet() {
-        }
+        animateLogoUp()
+        self.flowDelegate?.openLoginBottomSheet()
     }
     
+}
+
+//MARK: - Animations
+extension SplashViewController {
+    private func startBreathingAnimation() {
+        UIView.animate(withDuration: 1.6,delay: 0.2, animations: {
+            self.contentView.logoImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }, completion: { _ in
+            self.decideNavigationFlow()
+        })
+    }
+    
+    private func animateLogoUp() {
+        UIView.animate(withDuration: 0.6, delay: 0.2, options: [.curveEaseOut], animations: {
+            self.contentView.logoImageView.transform = self.contentView.logoImageView.transform.translatedBy(x: 0, y: -160)
+        })
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class SplashView: UIView {
     
-    private let logoImageView: UIImageView = {
+    let logoImageView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "Logo")
         image.contentMode = .scaleAspectFit
@@ -19,7 +19,7 @@ class SplashView: UIView {
     }()
     
     override init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         setupUI()
     }
     
