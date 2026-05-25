@@ -2,7 +2,7 @@
 //  ViewControllersFactory.swift
 //  Reminder
 //
-//  Created by Maria Eliza on 27/04/26.
+//  Created by Eduardo Frederico on 27/04/26.
 //
 
 import Foundation
@@ -20,5 +20,12 @@ final class ViewControllersFactory: ViewControllersFactoryProtocol {
         let contentView = LoginBottomSheetView()
         let viewController = LoginBottomSheetViewController(contentView: contentView, flowDelegate: flowDelegate)
         return viewController
-        }
+    }
+    
+    func makeHomeViewController(flowDelegate: HomeFlowDelegate) -> HomeViewController {
+        let contentView = HomeView()
+        let viewController = HomeViewController(contentView: contentView, flowDelegate: flowDelegate)
+        
+        return viewController
+    }
 }
